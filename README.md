@@ -4,8 +4,9 @@
 ---
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&center=true&vCenter=true&multiline=true&width=435&lines=Backend+Engineer+%7C+AI+%26+ML+Projects+Builder;FastAPI+%7C+Golang+%7C+Python+%7C+Cloud+Dev" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F97316&center=true&vCenter=true&width=500&lines=Backend+Engineer+🚀;AI+%26+ML+Projects+Builder+🧠;FastAPI+%7C+Golang+%7C+Python+%7C+Cloud+☁️" alt="Typing SVG" />
 </p>
+
 
 ---
 
