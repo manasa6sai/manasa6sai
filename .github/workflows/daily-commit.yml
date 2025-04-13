@@ -24,4 +24,6 @@ jobs:
           git add activity.md
           git commit -m "🤖 Daily update: $(date -u)" || echo "No changes to commit"
           git remote set-url origin https://manasa6sai:${{ secrets.MY_PAT }}@github.com/${{ github.repository }}
+          git pull origin main --rebase
           git push origin main
+
