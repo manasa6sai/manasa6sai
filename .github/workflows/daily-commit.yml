@@ -1,11 +1,8 @@
 name: 💚 Daily Contribution Commit
 
-permissions:
-  contents: write  # ✅ Needed to allow pushing changes
-
 on:
   schedule:
-    - cron: '0 8 * * *'  # Runs daily at 8 AM UTC
+    - cron: '0 8 * * *'  # runs every day at 8 AM UTC
   workflow_dispatch:
 
 jobs:
@@ -13,22 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ⏬ Checkout Repo with Token
+      - name: ⏬ Checkout Repo
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 📝 Update Timestamp
         run: |
           echo "Last update: $(date -u)" > activity.md
 
-      - name: 💾 Commit and Push with Authenticated Remote
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 💾 Commit and Push with Personal Access Token
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "manasa6sai"
+          git config user.email "manasakaranam6199@gmail.com"
           git add activity.md
           git commit -m "🤖 Daily update: $(date -u)" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+          git remote set-url origin https://manasa6sai:${{ secrets.MY_PAT }}@github.com/${{ github.repository }}
           git push origin main
